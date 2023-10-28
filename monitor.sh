@@ -35,7 +35,7 @@ mac_address=$(ip link show | awk '$1 == "link/ether" {print $2}')
 sudo_commands_count=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
 
 # Display system information
-echo "System Information:
+wall "System Information:
 - Architecture: $architecture
 - Physical CPUs: $physical_cpu_count
 - Virtual CPUs: $virtual_cpu_count
